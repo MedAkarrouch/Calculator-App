@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap");
+.theme-1:root {
+  --mainBg: hsl(222, 26%, 31%);
+  --toggleBg: hsl(223, 31%, 20%);
+  --screenBg: hsl(224, 36%, 15%);
+  --txtFir: hsl(221, 14%, 31%);
+  --txtSec: hsl(0, 0, 100%);
+  --keyBgFir: hsl(225, 21%, 49%);
+  --keyBgSec: hsl(6, 70%, 34%);
+  --keyBgThi: hsl(30, 25%, 89%);
+  --keyShadowFir: hsl(224, 28%, 35%);
+  --keyShadowSec: hsl(6, 63%, 50%);
+  --keyShadowThi: hsl(28, 16%, 65%);
+  --color1: #fff;
+  --color2: hsl(0, 0, 100%);
+  --color3: var(--color1); }
+
+.theme-1 .calc__theme__circle-box::after {
+  left: 7%; }
+
+.theme-2:root {
+  --color1: hsl(0, 0, 100%);
+  --color2: hsl(60, 10%, 19%);
+  --color3: #fff;
+  --mainBg: hsl(0, 0%, 90%);
+  --toggleBg: hsl(0, 5%, 81%);
+  --screenBg: hsl(0, 0%, 93%);
+  --txtFir: hsl(60, 10%, 19%);
+  --txtSec: hsl(0, 0, 100%);
+  --keyBgSec: hsl(25, 99%, 37%);
+  --keyBgThi: hsl(30, 25%, 89%);
+  --keyShadowSec: hsl(25, 98%, 45%);
+  --keyShadowThi: hsl(28, 16%, 65%);
+  --keyShadowFir: hsl(185, 58%, 25%);
+  --keyBgFir: hsl(185, 42%, 37%); }
+
+.theme-2 .calc__theme__circle-box::after {
+  left: 37%; }
+
+.theme-3:root {
+  --color1: hsl(52, 100%, 62%);
+  --color2: hsl(52, 100%, 62%);
+  --color3: hsl(290, 70%, 36%);
+  --mainBg: hsl(268, 75%, 9%);
+  --toggleBg: hsl(268, 71%, 12%);
+  --screenBg: hsl(268, 71%, 12%);
+  --txtFir: hsl(221, 14%, 31%);
+  --txtSec: hsl(0, 0, 100%);
+  --keyBgSec: hsl(176, 100%, 44%);
+  --keyBgThi: hsl(268, 47%, 21%);
+  --keyShadowThi: hsl(28, 16%, 65%);
+  --keyShadowFir: hsl(281, 89%, 26%);
+  --keyBgFir: hsl(285, 91%, 52%);
+  --keyShadowSec: hsl(177, 92%, 70%); }
+
+.theme-3 .calc__theme__circle-box::after {
+  left: 67%; }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 56.25%;
+  box-sizing: border-box; }
+  @media screen and (min-width: 90em) {
+    html {
+      font-size: 62%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  background-color: var(--mainBg); }
+
+.calc__container {
+  padding: 0 2rem;
+  max-width: 55rem;
+  background-color: var(--mainBg);
+  margin: 4rem auto 0 auto; }
+
+.calc__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+
+.calc__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem; }
+
+.calc__theme-numbers {
+  display: flex;
+  gap: 2rem;
+  color: var(--color1);
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 0 0.5rem 0 1rem;
+  margin-bottom: 0.5rem; }
+
+.calc__theme-number {
+  cursor: pointer; }
+
+.calc__theme__circle-box {
+  background-color: var(--toggleBg);
+  height: 3rem;
+  width: 100%;
+  border-radius: 20px;
+  position: relative; }
+  .calc__theme__circle-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--keyBgSec);
+    transition: left 0.3s linear; }
+
+.calc__name {
+  cursor: pointer;
+  font-size: 3.2rem;
+  color: var(--color1); }
+
+.calc__output {
+  height: 12rem;
+  width: 100%;
+  background-color: var(--screenBg);
+  border-radius: 6px;
+  text-align: right;
+  padding: 1rem 3rem; }
+  .calc__output--sub {
+    color: var(--color1);
+    opacity: 0.6;
+    font-size: 1.8rem;
+    transition: opacity 0.2s, visibility 0.1s; }
+  .calc__output--main {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--color1);
+    font-size: 5rem; }
+
+.calc__inputs {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  background-color: var(--toggleBg);
+  border-radius: 6px; }
+
+.calc__input {
+  color: var(--color2);
+  background-color: var(--keyBgThi);
+  cursor: pointer;
+  padding: 1.7rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: background-color 0.3s; }
+  .calc__input:hover {
+    background-color: var(--color3); }
+  .calc__input--del, .calc__input--reset {
+    font-size: 3rem;
+    font-weight: 600;
+    align-self: stretch;
+    background-color: var(--keyShadowFir); }
+    .calc__input--del:hover, .calc__input--reset:hover {
+      background-color: var(--keyBgFir); }
+  .calc__input--del, .calc__input--reset, .calc__input--equal {
+    color: var(--color1);
+    color: #fff; }
+  .calc__input--reset {
+    grid-column: 1 / span 2;
+    padding: 1.4rem 0; }
+  .calc__input--equal {
+    grid-column: 3 / span 2;
+    background-color: var(--keyBgSec);
+    padding: 1.4rem 0; }
+    .calc__input--equal:hover {
+      background-color: var(--keyShadowSec); }
+
+.show {
+  visibility: visible;
+  opacity: 1; }
+
+.translate-1::after {
+  left: 7%; }
+
+.translate-2::after {
+  left: 37%; }
+
+.translate-3:after {
+  left: 67%; }
